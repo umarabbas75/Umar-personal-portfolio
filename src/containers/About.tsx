@@ -23,6 +23,9 @@ const About = () => {
       <h2 className="heading-secondary">{title}</h2>
       <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
         <div className="space-y-4 lg:w-3/5">
+
+          <p>"Every line of code I write is meant to make life easier for the people who use the websites or apps I create. That’s my focus every time I work on a project."</p>
+
           <p>
             Hi, my name is Umar Abbas, Senior Frontend React Developer. Graduated from 
             <Link
