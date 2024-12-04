@@ -4,15 +4,14 @@ import { socialSection } from '@/lib/content/social';
 import useWindowWidth from '@/lib/hooks/use-window-width';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
 
-import { Button, SocialIcon, Wrapper } from '@/components';
+import { Button, SkillIcon, SocialIcon, Wrapper } from '@/components';
 
 import { slideUp } from '@/styles/animations';
 
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-  const { cta, subtitle, title, tagline, description } =
-    heroSection || {};
+  const { cta, subtitle, title, tagline, description } = heroSection || {};
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');
@@ -51,22 +50,21 @@ const Hero = () => {
           animate="show"
           className="leading-[1.2]"
         >
-          {tagline} <span className='text-lg tracking-wider'>with backend expertise</span>
+          {tagline}{' '}
+          <span className="text-lg tracking-wider">with backend expertise</span>
         </motion.h1>
-       
       </div>
 
       <motion.ul
-          variants={slideUp({ delay: getAnimationDelay(3) })}
-          initial="hidden"
-          animate="show"
-          className="leading-[1.2] flex"
-        >
-          {socialLinks.map(({ icon, url }) => (
-        <SocialIcon key={url} icon={icon} url={url} />
-      ))}
-        </motion.ul>
-  
+        variants={slideUp({ delay: getAnimationDelay(3) })}
+        initial="hidden"
+        animate="show"
+        className="leading-[1.2] flex"
+      >
+        {socialLinks.map(({ icon, url }) => (
+          <SocialIcon key={url} icon={icon} url={url} />
+        ))}
+      </motion.ul>
 
       <motion.p
         variants={slideUp({ delay: getAnimationDelay(3) })}
@@ -77,8 +75,7 @@ const Hero = () => {
         {description}
       </motion.p>
 
-     
-
+      <div className="flex gap-4">
         <Button
           size="lg"
           type="link"
@@ -91,7 +88,21 @@ const Hero = () => {
         >
           {cta?.title}
         </Button>
-    
+
+        <motion.a
+          href="https://www.loom.com/share/3c7f3347cae24e02a19bda09acedc4d8"
+          target="_blank"
+           animate="show"
+            initial="hidden"
+          variants={slideUp({ delay: getAnimationDelay(5) })}
+        >
+          <SkillIcon
+            src="flat-color-icons:video-call"
+            name="Video Introduction"
+            className="bg-white cursor-pointer"
+          />
+        </motion.a>
+      </div>
     </Wrapper>
   );
 };
