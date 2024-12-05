@@ -11,7 +11,7 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
       tasks:
         `As a Front-End Lead, I spearheaded this project, creating a scalable and maintainable architecture. we implementing a comprehensive and user-friendly loan management system.`,
       url: 'https://www.holo.com.au/',
-      privateUrl : 'https://login.holo.com.au/',
+      privateUrl : 'http://homeloans.showmysite.com.au/',
       videoDemoLink : 'https://www.loom.com/share/175ce2a196f64edfabbcc16946221abb',
       img: '/holo-ss.png',
       tags: [
